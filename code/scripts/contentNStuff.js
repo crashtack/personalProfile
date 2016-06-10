@@ -4,28 +4,28 @@ var dataNStuff = [
     catagory: 'external',
     revision: '1.0',
     athor: 'blabla',
-    description: '<p>The Front View, Blaaaa Bladiiii Blaaaa, to the blaaa...est'
+    description: '<p>The Front View, Blaaaa Bladiiii Blaaaa, to the blaaa...est</p>'
   },
   {
     title: 'Rear',
     catagory: 'external',
     revision: '1.0',
     athor: 'blabla',
-    description: '<p>The rear view. Blaaaa Bladiiii Blaaaa, to the blaaa...est'
+    description: '<p>The rear view. Blaaaa Bladiiii Blaaaa, to the blaaa...est</p>'
   },
   {
     title: 'First Floor',
     catagory: 'internal',
     revision: '1.0',
     athor: 'blabla',
-    description: '<p>Fist Floor internal, laaaa Bladiiii Blaaaa, to the blaaa...est'
+    description: '<p>Fist Floor internal, laaaa Bladiiii Blaaaa, to the blaaa...est</p>'
   },
   {
     title: 'Upstairs',
     catagory: 'external',
     revision: '1.0',
     athor: 'blabla',
-    description: '<p>Upstairs, Blaaaa Bladiiii Blaaaa, to the blaaa...est'
+    description: '<p>Upstairs, Blaaaa Bladiiii Blaaaa, to the blaaa...est</p>'
   },
 
 
