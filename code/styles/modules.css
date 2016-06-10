@@ -1,5 +1,13 @@
 .site-header {
   background: #9999FF;
+  background-image: url("../images/SouthElevation.jpg");
+  /* image-orientation: fixed; */
+  display: block;
+  /* background-repeat: no-repeat; */
+  background-size: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
 }
 
 /* DONE: Float the main header to the left, to make room for the
