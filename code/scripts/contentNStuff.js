@@ -1,6 +1,7 @@
 var dataNStuff = [
   {
     title: 'Front',
+    page: 'A02',
     catagory: 'external',
     revision: '1.0',
     athor: 'blabla',
@@ -8,6 +9,7 @@ var dataNStuff = [
   },
   {
     title: 'Rear',
+    page: 'A03',
     catagory: 'external',
     revision: '1.0',
     athor: 'blabla',
