@@ -1,1 +1,41 @@
 <!--  html goes here -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Personal Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+
+    <script id="content-template" type="text/x-handlebars-template">
+      <header>Personal Profile
+        <h2>{{title}}</h2>
+        <h3>{{catagory}}</h3>
+      </header>
+    </script>
+
+  </head>
+  <body>
+    <header class="site-header clearfix">
+      <section class="heading-group-h1">
+        <h1>Personal Profile</h1>
+        <h2>So far we got nothing here</h2>
+      </section>
+      <div id="ShowContentApp"></div>
+    </header>
+
+    <footer>
+      &copy; 2016 db code  | Personal Profile
+    </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+  <script src="scripts/contentNStuff.js"></script>
+  <script src="scripts/showContent.js"></script>
+  </body>
+
+<html>
