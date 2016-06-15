@@ -5,7 +5,7 @@ var dataNStuff = [
     catagory: 'external',
     revision: '1.0',
     athor: 'blabla',
-    description: '<p>The Front View, Blaaaa Bladiiii Blaaaa, to the blaaa...est</p>'
+    description: '<p>The Front View, Blaaaaaa Bladiiii Blaaaa, to the blaaa...est</p>'
   },
   {
     title: 'Rear',
