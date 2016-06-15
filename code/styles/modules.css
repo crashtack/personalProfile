@@ -8,8 +8,8 @@
   margin-left: auto;
   margin-right: auto;
   vertical-align: middle;
-  
-  
+
+
 }
 
 /* DONE: Float the main header to the left, to make room for the
@@ -68,6 +68,23 @@
 .byline a {
   font-weight: bold;
   text-decoration: none;
+}
+
+#articles {
+  display: none;
+}
+
+#about {
+  display: none;
+}
+
+#ajax-spinner h2 {
+  display: inline-block;
+  margin-bottom: 5rem;
+}
+
+#ajax-spinner img {
+  margin-top: 3rem;
 }
 
 /* TODO: Now add styles for how things should look on a larger screen,
