@@ -34,6 +34,7 @@
   };
 
   Content.prototype.insertRecord = function() {
+    console.log('entering .insertRecord');
     webDB.execute(
       [
         {
