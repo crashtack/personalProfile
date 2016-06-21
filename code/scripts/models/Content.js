@@ -1,3 +1,10 @@
+/*
+  content.js provides methods and functions to handle Content Data.
+  There are functions for loading of the JSON data, creating an SQL data base
+  populating the SQL data base with the data loaded from JSON.
+  
+*/
+
 (function(module) {
 
   function Content (opts) {
