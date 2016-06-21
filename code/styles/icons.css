@@ -18,14 +18,29 @@
 	text-transform: none;
 	line-height: 1;
 
+
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: blue;
 }
 
 .icon-home::before {
-	content: "\e908";
+	content: "\e900";
 }
+.icon-power-cord::before {
+	content: "\e9b7";
+}
+.icon-fire::before {
+	content: "\e9a9";
+}
+.icon-evil::before {
+	content: "\e9ef";
+}
+.icon-evil::before {
+	content: "\e9ef";
+}
+
 .icon-home3::before {
 	content: "\e900";
 }
@@ -33,7 +48,7 @@
 	content: "\e901";
 }
 .icon-rocket::before {
-	content: "\e909";
+	content: "\e90af";
 }
 .icon-power::before {
 	content: "\e90a";
@@ -63,8 +78,8 @@
 	content: "\e90e";
 }
 .icon-twitter3::before {
-	content: "\e906";
+	content: "\ea01";
 }
 .icon-github::before {
-	content: "\e907";
+	content: "\eab0";
 }

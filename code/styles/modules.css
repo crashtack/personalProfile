@@ -8,23 +8,18 @@
   margin-left: auto;
   margin-right: auto;
   vertical-align: middle;
-  
-  
+
+
 }
 
-/* DONE: Float the main header to the left, to make room for the
-    hamburger menu. */
 .heading-group-h1 {
   float: left;
   padding: 0 0 .2em 1em;
 }
 
 .icon-menu {
-  /* TODO: Add styles for the icon-menu class (whether it be the
-      hamburger font or an image of your choosing). It should be
-      bigger, and off to the right. */
-      font-size: 2em;
-      float: right;
+  font-size: 3em;
+  float: right;
 }
 
 .main-nav {
@@ -32,9 +27,6 @@
 }
 
 .main-nav ul {
-  /* NOTE: We are by defualt hiding the main nav list because we are
-      expecting the UI to be mobile, therefore our new icon menu
-      takes its place. */
   display: none;
   padding: 0;
   list-style: none;
@@ -50,15 +42,17 @@
   font-size: 1.5em;
   padding: .5em .2em;
   border-bottom: 1px solid #ccc;
+  color: red;
+}
+
+.tab-content {
+  display: none;
 }
 
 #filters {
   padding: 0;
-  list-style: none;
-}
-
-.template {
   display: none;
+  list-style: none;
 }
 
 .byline {
@@ -70,29 +64,41 @@
   text-decoration: none;
 }
 
-/* TODO: Now add styles for how things should look on a larger screen,
-   (hint: min is in!):
-@media only screen...
-         - Hide the hamburger.
-         - Display our unordered list (aka our nav links).
-         - The main-nav should be all on one row, with padding spaced better
-           for a larger screen.
-*/
+#article-export label {
+  font-size: .8em;
+  font-style: italic;
+  color: #ccc;
+}
+
+#ajax-spinner h2 {
+  display: inline-block;
+  margin-bottom: 5rem;
+}
+
+#ajax-spinner img {
+  margin-top: 3rem;
+}
+
 @media only screen and (min-width: 640px) {
   .icon-menu {
     display: none;
   }
 
+  .main-nav {
+    padding: .2em .2em .2em 2em;
+  }
+
   .main-nav ul {
     display: block;
+  }
 
-  }
-  .tab {
+  .main-nav ul li {
     display: inline;
-    max-width: 25%;
-    margin: auto;
+    border-bottom: none;
   }
-  .main-nav {
-    padding: 2em .6em;
+
+  .main-nav ul li:hover a {
+    color: #29506D;
   }
+
 }
