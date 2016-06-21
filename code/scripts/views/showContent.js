@@ -51,20 +51,22 @@
   };
 
   Content.fetchAll = function() {
-    webDB.execute('SELECT * FROM articles ORDER BY publishedOn DESC', function(rows) {
+    webDB.execute('SELECT * FROM articles ORDER BY page DESC', function(rows) {
       if (rows.length) {
-        Article.loadAll(rows);
+        Content.loadAll(rows);
         articleView.renderIndexPage();
         articleView.initAdminPage();
       } else {
-        $.getJSON('/data/hackerIpsum.json', function(rawData) {
+        console.log('entering .fecthAll else');
+        $.getJSON('/data/contentNStuff.json', function(rawData) {
           // Cache the json, so we don't need to request it next time:
+          console.log('fetchAll initial .getJSON call');
           rawData.forEach(function(item) {
-            var article = new Article(item); // Instantiate an article based on item from JSON
-            article.insertRecord(); // Cache the article in DB
+            var content = new Content(item); // Instantiate an article based on item from JSON
+            content.insertRecord(); // Cache the article in DB
           });
-          webDB.execute('SELECT * FROM articles ORDER BY publishedOn DESC', function(rows) {
-            Article.loadAll(rows);
+          webDB.execute('SELECT * FROM articles ORDER BY page DESC', function(rows) {
+            Content.loadAll(rows);
             articleView.renderIndexPage();
             articleView.initAdminPage();
           });
