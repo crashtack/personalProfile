@@ -44,6 +44,7 @@
     );
   };
 
+  // TODO: refactor this function
   Content.loadAll = function(rows) {
     Article.allArticles = rows.map(function(ele) {
       return new Article(ele);
