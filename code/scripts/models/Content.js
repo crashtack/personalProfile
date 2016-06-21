@@ -2,7 +2,7 @@
   content.js provides methods and functions to handle Content Data.
   There are functions for loading of the JSON data, creating an SQL data base
   populating the SQL data base with the data loaded from JSON.
-  
+
 */
 
 (function(module) {
@@ -12,6 +12,8 @@
       this[e] = opts[e];
     },this);
   }
+
+  Content.allContent = [];
 
   Content.prototype.toHtml = function (scriptTemplateId) {
     var template = Handlebars.compile($(scriptTemplateId).text());
@@ -54,7 +56,7 @@
 
   // TODO: refactor this function
   Content.loadAll = function(rows) {
-    Content.allArticles = rows.map(function(ele) {
+    Content.allContent = rows.map(function(ele) {
       return new Content(ele);
     });
   };
@@ -76,8 +78,8 @@
           });
           webDB.execute('SELECT * FROM drawings ORDER BY page DESC', function(rows) {
             Content.loadAll(rows);
-            articleView.renderIndexPage();
-            articleView.initAdminPage();
+            indexView.renderIndexPage();
+            indexView.initAdminPage();
           });
         });
       }
