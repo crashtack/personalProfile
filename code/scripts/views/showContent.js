@@ -18,7 +18,7 @@
 
   Content.createTable = function() {
     webDB.execute(
-      'CREATE TABLE IF NOT EXISTS articles (' +
+      'CREATE TABLE IF NOT EXISTS drawings (' +
         'id INTEGER PRIMARY KEY, ' +
         'title VARCHAR(255) NOT NULL, ' +
         'page VARCHAR(255) NOT NULL, ' +
@@ -37,7 +37,7 @@
     webDB.execute(
       [
         {
-          'sql': 'INSERT INTO articles (title, page, category, revision, publishedOn, author, body) VALUES (?, ?, ?, ?, ?, ?, ?);',
+          'sql': 'INSERT INTO drawings (title, page, category, revision, publishedOn, author, body) VALUES (?, ?, ?, ?, ?, ?, ?);',
           'data': [this.title, this.page, this.category, this.revision, this.publishedOn, this.author, this.body],
         }
       ]
@@ -46,13 +46,13 @@
 
   // TODO: refactor this function
   Content.loadAll = function(rows) {
-    Article.allArticles = rows.map(function(ele) {
-      return new Article(ele);
+    Content.allArticles = rows.map(function(ele) {
+      return new Content(ele);
     });
   };
 
   Content.fetchAll = function() {
-    webDB.execute('SELECT * FROM articles ORDER BY page DESC', function(rows) {
+    webDB.execute('SELECT * FROM drawings ORDER BY page DESC', function(rows) {
       if (rows.length) {
         Content.loadAll(rows);
         articleView.renderIndexPage();
@@ -66,7 +66,7 @@
             var content = new Content(item); // Instantiate an article based on item from JSON
             content.insertRecord(); // Cache the article in DB
           });
-          webDB.execute('SELECT * FROM articles ORDER BY page DESC', function(rows) {
+          webDB.execute('SELECT * FROM drawings ORDER BY page DESC', function(rows) {
             Content.loadAll(rows);
             articleView.renderIndexPage();
             articleView.initAdminPage();
