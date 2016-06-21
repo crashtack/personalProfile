@@ -1,12 +1,12 @@
 (function(module) {
 
-  function Article (opts) {
+  function Content (opts) {
     Object.keys(opts).forEach(function(e, index, keys) {
       this[e] = opts[e];
     },this);
   }
 
-  Content.prototype.toHtml = function (sourceTemplate) {
+  Content.prototype.toHtml = function (scriptTemplateId) {
     var template = Handlebars.compile($(scriptTemplateId).text());
 
     this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
@@ -73,15 +73,15 @@
     });
   };
 
-  content.forEach(function(a) {
-  if ($('#category-filter:contains("' + a.category + '")').length === 0 ) {
-    $('#category-filter').append(a.toHtml('#category-filter-template'));
-  }
-
-  //$('#aurthor-filter').append(a.toHtml('#aurthor-filter-template'));
-  $('#articles').append(a.toHtml('#article-template'));
-
-  });
+  // content.forEach(function(a) {
+  // if ($('#category-filter:contains("' + a.category + '")').length === 0 ) {
+  //   $('#category-filter').append(a.toHtml('#category-filter-template'));
+  // }
+  //
+  // //$('#aurthor-filter').append(a.toHtml('#aurthor-filter-template'));
+  // $('#articles').append(a.toHtml('#article-template'));
+  //
+  // });
 
   Content.createTable();
   Content.fetchAll();

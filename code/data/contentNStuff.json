@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Front",
+    "page": "A02",
+    "catagory": "external",
+    "revision": "1.0",
+    "publishedOn": "2016-5-28",
+    "author": "blabla",
+    "body": "<p>The Front View, Blaaaa Bladiiii Blaaaa, to the blaaa...est</p>"
+  },
+  {
+    "title": "Rear",
+    "page": "A03",
+    "catagory": "external",
+    "revision": "1.0",
+    "publishedOn": "2016-5-28",
+    "author": "blabla",
+    "body": "<p>The rear view. Blaaaa Bladiiii Blaaaa, to the blaaa...est</p>"
+  },
+  {
+    "title": "First Floor",
+    "catagory": "internal",
+    "revision": "1.0",
+    "publishedOn": "2016-5-28",
+    "author": "blabla",
+    "body": "<p>Fist Floor internal, laaaa Bladiiii Blaaaa, to the blaaa...est</p>"
+  },
+  {
+    "title": "Upstairs",
+    "catagory": "external",
+    "revision": "1.0",
+    "publishedOn": "2016-5-28",
+    "author": "blabla",
+    "body": "<p>Upstairs, Blaaaa Bladiiii Blaaaa, to the blaaa...est</p>"
+  }
+];
