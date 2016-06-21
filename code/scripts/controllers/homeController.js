@@ -3,7 +3,7 @@
 
   homeController.index = function() {
     $('.tab-content').hide();
-    $('#articles').fadeIn();
+    $('#content').fadeIn();
 
   };
 

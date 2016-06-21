@@ -65,8 +65,8 @@
     webDB.execute('SELECT * FROM drawings ORDER BY page DESC', function(rows) {
       if (rows.length) {
         Content.loadAll(rows);
-        articleView.renderIndexPage();
-        articleView.initAdminPage();
+        indexView.renderIndexPage();
+        // articleView.initAdminPage();
       } else {
         console.log('entering .fecthAll else');
         $.getJSON('/data/contentNStuff.json', function(rawData) {
@@ -79,7 +79,7 @@
           webDB.execute('SELECT * FROM drawings ORDER BY page DESC', function(rows) {
             Content.loadAll(rows);
             indexView.renderIndexPage();
-            indexView.initAdminPage();
+            //indexView.initAdminPage();
           });
         });
       }
