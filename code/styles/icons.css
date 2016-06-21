@@ -26,15 +26,19 @@
 
 .icon-home::before {
 	content: "\e900";
+	color: blue;
 }
 .icon-power-cord::before {
 	content: "\e9b7";
+	color: blue;
 }
 .icon-fire::before {
 	content: "\e9a9";
+	color: red;
 }
 .icon-evil::before {
 	content: "\e9ef";
+	color: red;
 }
 .icon-evil::before {
 	content: "\e9ef";
