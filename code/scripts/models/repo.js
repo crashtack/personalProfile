@@ -7,7 +7,7 @@
     /* TODO: How would you like to fetch your repos? Someone say AJAX?!
       Do not forget to call the callback! */
     $.ajax({
-      url: 'https://api.github.com/users/codefellows-seattle-301d7/repos' +
+      url: 'https://api.github.com/users/crashtack/repos' +
         '?per_page=10' +
         '&sort=updated',
       typeof: 'GET',
