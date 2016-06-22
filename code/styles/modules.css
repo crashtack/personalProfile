@@ -1,5 +1,8 @@
 .site-header {
   background: #9999FF;
+  /* TODO: change the background image to an image layer bellow
+            the rest of the heading
+  */
   background-image: url("../images/SouthElevation.jpg");
   /* image-orientation: fixed; */
   display: block;
@@ -7,6 +10,7 @@
   background-size: 100%;
   margin-left: auto;
   margin-right: auto;
+  height: 100%;
   vertical-align: middle;
 
 
