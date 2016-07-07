@@ -14,7 +14,7 @@ Content.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.attr('data-catagory', this.category);
 
-  $newArticle.find('h1').html(this.titile);
+  $newArticle.find('h1').html(this.title);
   $newArticle.find('section.page').html(this.page);
   $newArticle.find('section.category').html(this.category);
   $newArticle.find('section.revision').html(this.revision);
