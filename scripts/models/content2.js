@@ -8,9 +8,9 @@ function Content (opts) {
   this.revision = opts.revision;
   this.author = opts.author;
   this.body = opts.body;
-};
+}
 
-Content.protoype.toHtml = function() {
+Content.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.attr('data-catagory', this.category);
 
@@ -40,11 +40,11 @@ ourLocalData.sort(function(a,b) {
 /* Now iterate through our transformed collection and instantiate
  a new Article instance for each object in our collection. */
 ourLocalData.forEach(function(ele){
-  articles.push(new Article(ele));
+  content.push(new Content(ele));
 });
 
 /* Append each Article to the DOM.
 NOTE: Remember that the '.toHtml' method invoked is one WE created. */
-articles.forEach(function(article){
-  $('#content').append(article.toHtml());
+content.forEach(function(content){
+  $('#content').append(content.toHtml());
 });
