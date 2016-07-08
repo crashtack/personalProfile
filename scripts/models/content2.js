@@ -18,6 +18,8 @@ Content.prototype.toHtml = function() {
   $newArticle.removeClass('template');
   $newArticle.attr('data-category', this.category);
 
+  $newArticle.find('data-page', this.page);
+
   $newArticle.find('h1').html(this.title);
   $newArticle.find('section.page').html(this.page);
   $newArticle.find('section.category').html(this.category);

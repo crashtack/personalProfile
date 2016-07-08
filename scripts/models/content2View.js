@@ -18,7 +18,21 @@ content2View.populateFilters = function() {
   });
 };
 
-
+content2View.handlePageFilter = function() {
+  $('#page-filter').on('change', function() {
+    if ($(this).val()) {
+      // Hide all the articles
+      // Fade in the articles that match our filter
+      $('article').hide();
+      $('article[data-page="'+ $(this).val() +'"]').fadeIn();
+    } else {
+      // show all the articles except the template
+      $('article').not('.template').show();
+    }
+    // Reset the category-filter:
+    $('#category-filter').val('');
+  });
+};
 
 $(document).ready(function() {
   content2View.populateFilters();
