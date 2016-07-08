@@ -36,6 +36,7 @@ content2View.handlePageFilter = function() {
 
 $(document).ready(function() {
   content2View.populateFilters();
+  content2View.handlePageFilter();
   //articleView.handleAuthorFilter();
   //articleView.handleCategoryFilter();
   //articleView.handleMainNav();
