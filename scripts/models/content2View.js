@@ -60,6 +60,22 @@ content2View.handleMainNav = function() {
   $('.main-nav .tab:first').click(); // trigger a click on the first .tab element
 };
 
+content2View.setTeasers = function() {
+  // Hide any elements after the first 2 (<p> tags in this case)
+  // in any artcile body:
+  $('.article-body *:nth-of-type(n+2)').hide();
+
+  $('#content').on('click', 'a.read-on', function(e) {
+    e.preventDefault();
+    $(this).parent().find('*').show();
+    //$(this).hide();
+    $(this).html('Read less &rarr;');
+  });
+
+  // STRETCH GOAL!: change the read more link to read less
+  //$('#content a.read-on').html('Read less &rarr;');
+};
+
 $(document).ready(function() {
   $('.tab-content').hide();
   $('#content').fadeIn();
@@ -67,8 +83,6 @@ $(document).ready(function() {
   content2View.populateFilters();
   content2View.handlePageFilter();
   content2View.handleCategoryFilter();
-  //articleView.handleAuthorFilter();
-  //articleView.handleCategoryFilter();
-  //articleView.handleMainNav();
-  //articleView.setTeasers();
+  content2View.handleMainNav();
+  content2View.setTeasers();
 });
