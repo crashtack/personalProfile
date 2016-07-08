@@ -51,4 +51,6 @@ ourLocalData.forEach(function(ele){
 NOTE: Remember that the '.toHtml' method invoked is one WE created. */
 content.forEach(function(content){
   $('#content').append(content.toHtml());
+  $('#content').fadeIn();
+  $('article.template').hide();
 });
