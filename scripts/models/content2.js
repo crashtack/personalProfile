@@ -11,8 +11,13 @@ function Content (opts) {
 }
 
 Content.prototype.toHtml = function() {
+  //$('.tab-content').hide();
+  //$('#content').fadeIn();
+
   var $newArticle = $('article.template').clone();
-  $newArticle.attr('data-catagory', this.category);
+  $newArticle.removeClass('template');
+  $newArticle.attr('data-category', this.category);
+  $newArticle.attr('data-page', this.page);
 
   $newArticle.find('h1').html(this.title);
   $newArticle.find('section.page').html(this.page);
@@ -26,6 +31,10 @@ Content.prototype.toHtml = function() {
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
 
   $newArticle.removeClass('template');
+  //$('article .template').hide();
+  //$('.tab-content').hide();
+
+
   return $newArticle;
 };
 
@@ -44,4 +53,7 @@ ourLocalData.forEach(function(ele){
 NOTE: Remember that the '.toHtml' method invoked is one WE created. */
 content.forEach(function(content){
   $('#content').append(content.toHtml());
+  $('#content').fadeIn();
+
 });
+// $('article.template').hide();

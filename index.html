@@ -21,8 +21,8 @@
       <nav class="main-nav">
         <div class="icon-menu"></div>
         <ul>
-          <li class="tab" data-content="articles"><a href="/" class="icon-home"> Home</a></li>
-          <li class="tab" data-content="about"><a href="/about" class="icon-power-cord"> About</a></li>
+          <li class="tab" data-content="content"><a href="#" class="icon-home"> Home</a></li>
+          <li class="tab" data-content="about"><a href="#" class="icon-power-cord"> About</a></li>
           <li class="tab" data-content="blog-stats"><a href="/stats" class="icon-fire"> Stats</a></li>
           <li class="tab"><a href="new.html" class="icon-evil"> New Article</a></li>
           <li><a href="http://twitter.com/codefellowsSEA" target="_blank" class="icon-twitter3"> Twitter</a></li>
@@ -31,7 +31,24 @@
       </nav>
     </header>
     <main>
-      <section id="content">
+
+
+      <section id="content" class="tab-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="page-filter">
+                <option value="">-- Filter by Page --</option>
+              </select>
+            </li>
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+
         <article class="template" data-category="cat">
           <header>
             <h1>Title</h1>
@@ -44,8 +61,11 @@
             </div>
           </header>
           <section class="article-body"></section>
+          <a href="#" class="read-on">Read on &rarr;</a>
         </article>
       </section>
+
+
       <section id="about" class="tab-content">
         <h1>Check out my Projects on GitHub:</h1>
           <ul>
@@ -72,6 +92,7 @@
   <!-- <script src="/scripts/models/Content.js"></script> -->
   <script src="/data/contentNStuff.js" type="text/javascript"></script>
   <script src="/scripts/models/content2.js" type="text/javascript"></script>
+  <script src="/scripts/models/content2View.js" type="text/javascript"></script>
 
   <!-- <script src="/scripts/models/repo.js"></script> -->
   <!-- <script src="/scripts/models/contentNStuff.js"></script> -->

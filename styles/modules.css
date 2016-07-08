@@ -50,16 +50,16 @@
 }
 
 .tab-content {
-  display: none;
+  /*display: none;*/
 }
 
 #about {
-    display: none;
+    /*display: none;*/
 }
 
 #filters {
   padding: 0;
-  display: none;
+  /*display: none;*/
   list-style: none;
 }
 
