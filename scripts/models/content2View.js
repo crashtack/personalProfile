@@ -5,7 +5,7 @@ var content2View = {};
 content2View.populateFilters = function() {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
-      var val = $(this).find('address a').text();
+      var val = $(this).find('section.page').text();
       var optionTag = '<option value="' + val + '">' + val + '</option>';
       $('#page-filter').append(optionTag);
 
@@ -17,6 +17,8 @@ content2View.populateFilters = function() {
     }
   });
 };
+
+
 
 $(document).ready(function() {
   content2View.populateFilters();

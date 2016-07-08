@@ -11,11 +11,12 @@ function Content (opts) {
 }
 
 Content.prototype.toHtml = function() {
-  $('.tab-content').hide();
+  //$('.tab-content').hide();
   //$('#content').fadeIn();
 
   var $newArticle = $('article.template').clone();
-  $newArticle.attr('data-catagory', this.category);
+  $newArticle.removeClass('template');
+  $newArticle.attr('data-category', this.category);
 
   $newArticle.find('h1').html(this.title);
   $newArticle.find('section.page').html(this.page);
