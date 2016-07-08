@@ -34,12 +34,29 @@ content2View.handlePageFilter = function() {
   });
 };
 
+content2View.handleCategoryFilter = function() {
+  $('#category-filter').on('change', function() {
+    if ($(this).val()) {
+      // Hide all the articles
+      // Fade in the articles that match our filter
+      $('article').hide();
+      $('article[data-category="'+ $(this).val() +'"]').fadeIn();
+    } else {
+      // show all the articles except the template
+      $('article').not('.template').show();
+    }
+    // Reset the category-filter:
+    $('#page-filter').val('');
+  });
+};
+
 $(document).ready(function() {
   $('.tab-content').hide();
   $('#content').fadeIn();
   $('article.template').hide();
   content2View.populateFilters();
   content2View.handlePageFilter();
+  content2View.handleCategoryFilter();
   //articleView.handleAuthorFilter();
   //articleView.handleCategoryFilter();
   //articleView.handleMainNav();
