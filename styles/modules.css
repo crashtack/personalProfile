@@ -50,11 +50,11 @@
 }
 
 .tab-content {
-  display: none;
+  /*display: none;*/
 }
 
 #about {
-    display: none;
+    /*display: none;*/
 }
 
 #filters {

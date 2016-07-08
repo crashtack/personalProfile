@@ -11,6 +11,9 @@ function Content (opts) {
 }
 
 Content.prototype.toHtml = function() {
+  $('.tab-content').hide();
+  //$('#content').fadeIn();
+
   var $newArticle = $('article.template').clone();
   $newArticle.attr('data-catagory', this.category);
 
@@ -26,6 +29,10 @@ Content.prototype.toHtml = function() {
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
 
   $newArticle.removeClass('template');
+  //$('article .template').hide();
+  //$('.tab-content').hide();
+
+
   return $newArticle;
 };
 
