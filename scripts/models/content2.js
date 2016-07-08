@@ -17,8 +17,7 @@ Content.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.removeClass('template');
   $newArticle.attr('data-category', this.category);
-
-  $newArticle.find('data-page', this.page);
+  $newArticle.attr('data-page', this.page);
 
   $newArticle.find('h1').html(this.title);
   $newArticle.find('section.page').html(this.page);
@@ -57,4 +56,4 @@ content.forEach(function(content){
   $('#content').fadeIn();
 
 });
-$('article.template').hide();
+// $('article.template').hide();

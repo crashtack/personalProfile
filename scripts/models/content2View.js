@@ -35,6 +35,9 @@ content2View.handlePageFilter = function() {
 };
 
 $(document).ready(function() {
+  $('.tab-content').hide();
+  $('#content').fadeIn();
+  $('article.template').hide();
   content2View.populateFilters();
   content2View.handlePageFilter();
   //articleView.handleAuthorFilter();
