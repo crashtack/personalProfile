@@ -50,6 +50,16 @@ content2View.handleCategoryFilter = function() {
   });
 };
 
+content2View.handleMainNav = function() {
+
+  $('.main-nav').on('click', '.tab', function() {
+    $('.tab-content').hide();
+    $('#' + $(this).data('content')).fadeIn();
+  });
+
+  $('.main-nav .tab:first').click(); // trigger a click on the first .tab element
+};
+
 $(document).ready(function() {
   $('.tab-content').hide();
   $('#content').fadeIn();
