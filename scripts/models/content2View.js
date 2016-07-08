@@ -7,7 +7,7 @@ content2View.populateFilters = function() {
     if (!$(this).hasClass('template')) {
       var val = $(this).find('address a').text();
       var optionTag = '<option value="' + val + '">' + val + '</option>';
-      $('category-filter').append(optionTag);
+      $('#page-filter').append(optionTag);
 
       val = $(this).attr('data-category');
       optionTag = '<option value="' + val + '">' + val + '</option>';
